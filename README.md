@@ -2,20 +2,6 @@
 
 A modern, full-stack web application for tracking personal income and expenses with real-time updates, data visualization, and dark mode support.
 
-![Finance Tracker Dashboard]
-
-## 📋 Table of Contents
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Firebase Setup](#firebase-setup)
-- [Usage Guide](#usage-guide)
-- [Component Breakdown](#component-breakdown)
-- [API Reference](#api-reference)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## ✨ Features
 
 ### Core Features
