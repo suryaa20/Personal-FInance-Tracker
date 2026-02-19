@@ -39,4 +39,3 @@ A modern, full-stack web application for tracking personal income and expenses w
 - **npm** - Package management
 - **Git** - Version control
 
-## 📁 Project Structure
