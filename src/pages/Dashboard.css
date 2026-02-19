@@ -1,0 +1,134 @@
+.dashboard {
+  min-height: calc(100vh - 73px);
+  padding-bottom: 40px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  position: relative;
+  display: inline-block;
+}
+
+.dashboard-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 2px;
+  animation: expandWidth 1s ease;
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+
+.toggle-charts-btn {
+  padding: 10px 20px;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 30px;
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-charts-btn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 126, 95, 0.3);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  background: var(--surface);
+  border-radius: 20px;
+  border: 2px dashed var(--border);
+  margin: 40px 0;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 126, 95, 0.1); }
+  50% { box-shadow: 0 0 0 20px rgba(255, 126, 95, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 126, 95, 0); }
+}
+
+.empty-state h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--text);
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.empty-state p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: var(--textLight);
+}
+
+.empty-state-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .dashboard-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .empty-state h2 {
+    font-size: 1.8rem;
+  }
+  
+  .empty-state-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

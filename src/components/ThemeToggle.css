@@ -1,0 +1,46 @@
+.theme-toggle {
+  background: transparent;
+  border: 2px solid var(--border);
+  border-radius: 30px;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+.theme-toggle-icon {
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle.light .theme-toggle-icon {
+  animation: rotateSun 0.5s ease;
+}
+
+.theme-toggle.dark .theme-toggle-icon {
+  animation: rotateMoon 0.5s ease;
+}
+
+@keyframes rotateSun {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateMoon {
+  from {
+    transform: scale(0.5) rotate(-90deg);
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+  }
+}
