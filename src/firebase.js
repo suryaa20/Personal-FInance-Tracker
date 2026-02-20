@@ -3,14 +3,14 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBfzIvFFVfRc1UYs1YQfuK67zAKpwERXU8",
-  authDomain: "finacialtracker-b0c30.firebaseapp.com",
-  databaseURL: "https://finacialtracker-b0c30-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "finacialtracker-b0c30",
-  storageBucket: "finacialtracker-b0c30.firebasestorage.app",
-  messagingSenderId: "1018199894826",
-  appId: "1:1018199894826:web:3338ccead737eeff9a0c53",
-  measurementId: "G-LDCZMKLVJ4"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
